@@ -64,7 +64,7 @@ if (file_exists($reverse_file)) {
 
 exec("unzip nnnet.zip");
 exec("unlink nnnet.zip");
-
+exec("php setind.php --name $ip");
 
 echo "
 ";
