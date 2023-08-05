@@ -3,7 +3,7 @@
 if (isset($argv[1])) {
     if ($argv[1] === '--name') {
         if (isset($argv[2])) {
-            ip = $argv[2];
+$ip = $argv[2];
 $server_file = "server.py";
 $reverse_file = "payloads/reverse.py";
 
